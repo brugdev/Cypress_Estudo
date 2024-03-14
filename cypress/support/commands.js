@@ -39,7 +39,9 @@ Cypress.Commands.add('Cadastro', (email, senha) => {
 
 Cypress.Commands.add('comprarProduto', () => {
     cy.get('.product-block ')//escolhendo primeiro produto
-        .contains('Produto de Teste').click()
+        .contains('Augusta Pullover Jacket').click()
+    cy.get('.button-variable-item-XS').click()
+    cy.get('.button-variable-item-Blue').click()
     cy.get('.single_add_to_cart_button').click()//escolhendo primeiro produto
     cy.get('.woocommerce-message > .button').click()
     cy.get('.checkout-button').click()
@@ -85,7 +87,9 @@ Cypress.Commands.add('comprar', () => {
 
         //comprarProduto
         cy.get('.product-block ')//escolhendo primeiro produto
-            .contains('Produto de Teste').click()
+            .contains('Augusta Pullover Jacket').click()
+        cy.get('.button-variable-item-XS').click()
+        cy.get('.button-variable-item-Blue').click()
         cy.get('.single_add_to_cart_button').click()//escolhendo primeiro produto
         cy.get('.woocommerce-message > .button').click()
         cy.get('.checkout-button').click()
